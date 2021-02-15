@@ -165,6 +165,9 @@ Doxybook2::Renderer::Renderer(const Config& config, const std::optional<std::str
         }
         return str;
     });
+    env->add_callback("comment", 1, [=](inja::Arguments& args) -> nlohmann::json {
+        return "";
+    });
     // env->set_trim_blocks(false);
     // env->set_lstrip_blocks(false);
 
